@@ -22,6 +22,7 @@ for i in range(10):
 
 # -----------------------------
 # メソッド
+https://docs.python.org/ja/3/library/functions.html#func-list
 
 ##### 受け取った値をスペースで区切ってわける。(split)
 n = input().split() 
@@ -33,6 +34,9 @@ a,b,c = input().split()
 #### 受け取った値をすべて整数に変化する。(map)
 n = map(int(input()))
 a,b = map(int,input().split())
+#受け取ってリストに整数で保管する方法！
+b = list(map(int, input().split()))
+出力は[1,2,3,4]になる
 
 #### リストにデータを追加する方法(append)
 # どのデータ型でも保存できる。
@@ -130,3 +134,17 @@ for i in range(1,n+1):
 n = input().split()
 N = int(n[0])
 M = int(n[1])
+
+# 値をリストで受け取り整数に変換してfor文に組み込んで繰り返し処理を行う方法！
+a = int(input())
+b = list(map(int, input().split()))
+print(b_values)
+for i in range(a):
+    for j in range(1, b[i] + 1):
+        print(j, end=" ")
+    print()
+# 結果例a=4 b=2341
+1 2
+1 2 3
+1 2 3 4
+1
