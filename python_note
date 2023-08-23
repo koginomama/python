@@ -18,7 +18,10 @@ for i in range(10):
 # 結果
 1 2 3 4 5 6 7 8 9 10
 
-
+# for文の応用配列の順番とリストの値を使う(enumerate)
+name = ["佐藤","伊藤","武藤"]
+for (i,n) in enumerate(name):
+    print(str(i+1)+"は"+ n "です")# 「1は佐藤です」になり順番で出力される。
 
 # -----------------------------
 # メソッド
@@ -66,6 +69,19 @@ num = [1, 2, 3]
 num.pop(1)
 #出力結果
 [1,3]
+
+# リストのソート(sorted)
+print(sorted(num))#数字であれば小さい順、文字であればあいうえお、abcd順となる
+print(sorted(num,reverse=True))#上記の逆順にソートされる
+print(sorted(num.items()))#キーと値がセットになってリストに表示される
+
+#  リストの２次元処理
+team = [["勇者", "戦士", "魔法使い"],[1, 2, 3],['a', 'b', 'c']]
+print(team[0][1])# 戦士が出力
+print(tesm[2][1])# aが出力
+
+
+
 
 #### 小数点の切り下げ（math.floor)
 #### 小数点の切り上げ (math.ceil)
