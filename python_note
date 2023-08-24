@@ -23,6 +23,28 @@ name = ["佐藤","伊藤","武藤"]
 for (i,n) in enumerate(name):
     print(str(i+1)+"は"+ n "です")# 「1は佐藤です」になり順番で出力される。
 
+# ドット絵のループ表示
+a = [[[0,1,0],[1,0,1],[0,1,0]],[[0,1,0],[1,0,1],[0,1,0]],[[0,1,0],[1,0,1],[0,1,0]]]
+
+for img in a:
+    for line in img:
+        for dot in line:
+            if dot == 1:
+                print("#", end="")
+            else:
+                print(" ", end="")
+        print()
+# 出力は↓が３つ並ぶ
+ # 
+# #
+ #
+
+
+
+# 2次元配列を行う方法
+n = [[7 for i in range(4)]for j in range(5)]# 7の出力を回くりかえしたリストを5回くりかえしてリストにする。
+print(n) # [[7, 7, 7, 7], [7, 7, 7, 7], [7, 7, 7, 7], [7, 7, 7, 7], [7, 7, 7, 7]]
+
 # -----------------------------
 # メソッド
 https://docs.python.org/ja/3/library/functions.html#func-list
