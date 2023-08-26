@@ -26,9 +26,9 @@ for (i,n) in enumerate(name):
 # ドット絵のループ表示
 a = [[[0,1,0],[1,0,1],[0,1,0]],[[0,1,0],[1,0,1],[0,1,0]],[[0,1,0],[1,0,1],[0,1,0]]]
 
-for img in a:
-    for line in img:
-        for dot in line:
+for img in a: #まずa[0]~[2]のリストを3回くり返す
+    for line in img: #a[0][0]~[2][2]まで擦り返す
+        for dot in line:#a[0][0][0]~[2][2][2]まで繰り返す
             if dot == 1:
                 print("#", end="")
             else:
@@ -42,8 +42,23 @@ for img in a:
 
 
 # 2次元配列を行う方法
-n = [[7 for i in range(4)]for j in range(5)]# 7の出力を回くりかえしたリストを5回くりかえしてリストにする。
+n = [[7 for i in range(4)]for j in range(5)]# 7の出力を4回くりかえしたリストを5回くりかえしてリストにする。
 print(n) # [[7, 7, 7, 7], [7, 7, 7, 7], [7, 7, 7, 7], [7, 7, 7, 7], [7, 7, 7, 7]]
+
+# 先頭に番号をつける。
+text = ["ああああ",
+        "いいいい",
+        "うううう",
+        "ええええ"]
+
+#ここに、行番号を表示するコードを記述する
+for i,line in enumerate(text):
+    print(str(i+1) + ":",end="")# 1:ああああ、2:いいいいとなっていく
+    for a in line:
+        print(a,end="")
+    print()
+
+
 
 # -----------------------------
 # メソッド
