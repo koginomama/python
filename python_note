@@ -58,6 +58,13 @@ for i,line in enumerate(text):
         print(a,end="")
     print()
 
+# while文
+while True:
+    line = input()
+    if line == "_":# もしlineのリストに_があった場合
+        break # _があったら修了する・
+    print(line)# split()を入れると分割できる
+
 
 
 # -----------------------------
